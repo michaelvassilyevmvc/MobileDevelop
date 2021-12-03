@@ -1,42 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"        
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XamarinGuy.Views"
              x:Class="XamarinGuy.MainPage">
 
-    <StackLayout VerticalOptions="Center" Spacing="50">
-
-        <StackLayout.Resources>
-            <ResourceDictionary>
-                <Style TargetType="Button">
-                    <Setter Property="HorizontalOptions" Value="Center"></Setter>
-                </Style>
-            </ResourceDictionary>
-        </StackLayout.Resources>
+    <Shell.FlyoutHeader>
+        <local:HeaderContentView></local:HeaderContentView>
+    </Shell.FlyoutHeader>
+    <FlyoutItem Title="MyTabApp" Shell.TabBarIsVisible="False"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Bears" Icon="ic_action_beach_access.png" IsTabStop="true" ContentTemplate="{DataTemplate local:Page1}"></ShellContent>
+        <ShellContent Title="Elephants" Icon="ic_action_desktop_mac.png" IsTabStop="true" ContentTemplate="{DataTemplate local:Page2}"></ShellContent>
         
-        <Button Text="I am Camera" BackgroundColor="Wheat" BorderRadius="20" TextColor="Black">
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource" iOS="baseline_photo_camera_black_24.png" Android="baseline_photo_camera_black_24.png"></OnPlatform>
-            </Button.Image>
-        </Button>
-
-        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
-                <Button Text="Left" BackgroundColor="IndianRed" BorderRadius="22" TextColor="Black">
-                    <Button.Image>
-                        <OnPlatform x:TypeArguments="FileImageSource" iOS="baseline_arrow_back_white_24.png" Android="baseline_arrow_back_white_24.png"></OnPlatform>
-                    </Button.Image>
-                </Button>
-            </StackLayout>
-
-            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
-                <Button Text="right" BackgroundColor="IndianRed" BorderRadius="22" TextColor="Black">
-                    <Button.Image>
-                        <OnPlatform x:TypeArguments="FileImageSource" iOS="baseline_arrow_forward_white_24.png" Android="baseline_arrow_forward_white_24.png"></OnPlatform>
-                    </Button.Image>
-                </Button>
-            </StackLayout>
-        </StackLayout>
-    </StackLayout>
+    </FlyoutItem>
+    <ShellContent Title="About" Icon="ic_action_beach_access.png" ContentTemplate="{DataTemplate local:Page1}"></ShellContent>
     
-
-</ContentPage>
+</Shell>

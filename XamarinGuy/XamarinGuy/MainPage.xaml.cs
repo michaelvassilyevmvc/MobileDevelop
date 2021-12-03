@@ -8,11 +8,16 @@ using Xamarin.Forms;
 
 namespace XamarinGuy
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : Shell
     {
         public MainPage()
         {
             InitializeComponent();
+        }
+
+        private void navigationDrawerList_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+
         }
     }
 }
