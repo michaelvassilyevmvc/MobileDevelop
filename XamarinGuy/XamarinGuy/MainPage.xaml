@@ -3,22 +3,40 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="XamarinGuy.MainPage">
 
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Label Text="Start developing now" FontSize="Title" Padding="30,10,30,10"/>
-        <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="30,0,30,0"/>
-        <Label FontSize="16" Padding="30,24,30,0">
-            <Label.FormattedText>
-                <FormattedString>
-                    <FormattedString.Spans>
-                        <Span Text="Learn more at "/>
-                        <Span Text="https://aka.ms/xamarin-quickstart" FontAttributes="Bold"/>
-                    </FormattedString.Spans>
-                </FormattedString>
-            </Label.FormattedText>
-        </Label>
+    <StackLayout VerticalOptions="Center" Spacing="50">
+
+        <StackLayout.Resources>
+            <ResourceDictionary>
+                <Style TargetType="Button">
+                    <Setter Property="HorizontalOptions" Value="Center"></Setter>
+                </Style>
+            </ResourceDictionary>
+        </StackLayout.Resources>
+        
+        <Button Text="I am Camera" BackgroundColor="Wheat" BorderRadius="20" TextColor="Black">
+            <Button.Image>
+                <OnPlatform x:TypeArguments="FileImageSource" iOS="baseline_photo_camera_black_24.png" Android="baseline_photo_camera_black_24.png"></OnPlatform>
+            </Button.Image>
+        </Button>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Button Text="Left" BackgroundColor="IndianRed" BorderRadius="22" TextColor="Black">
+                    <Button.Image>
+                        <OnPlatform x:TypeArguments="FileImageSource" iOS="baseline_arrow_back_white_24.png" Android="baseline_arrow_back_white_24.png"></OnPlatform>
+                    </Button.Image>
+                </Button>
+            </StackLayout>
+
+            <StackLayout Orientation="Vertical" HorizontalOptions="FillAndExpand">
+                <Button Text="right" BackgroundColor="IndianRed" BorderRadius="22" TextColor="Black">
+                    <Button.Image>
+                        <OnPlatform x:TypeArguments="FileImageSource" iOS="baseline_arrow_forward_white_24.png" Android="baseline_arrow_forward_white_24.png"></OnPlatform>
+                    </Button.Image>
+                </Button>
+            </StackLayout>
+        </StackLayout>
     </StackLayout>
+    
 
 </ContentPage>
