@@ -4,5 +4,63 @@
              x:Class="XamarinGuy.App">
     <Application.Resources>
 
+        <ResourceDictionary>
+            
+            <!--colors-->
+            <Color x:Key="HeaderTextColor">#555555</Color>
+            <Color x:Key="BodyTextColor">#bababa</Color>
+            
+            
+            <!--customized font-->
+            <OnPlatform x:Key="RegularFontFamily" x:TypeArguments="x:String">
+                <On Platform="iOS">HelveticaNeue</On>
+                <On Platform="Android">sans-serif</On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="LightFontFamily" x:TypeArguments="x:String">
+                <On Platform="Android">sans-serif</On>
+            </OnPlatform>
+
+            <OnPlatform x:Key="MediumFontFamily" x:TypeArguments="x:String">
+                <On Platform="Android">sans-serif-medium</On>
+            </OnPlatform>
+            
+            <!--font sizes-->
+            <x:Double x:Key="TitleFont">20</x:Double>
+            <x:Double x:Key="BodyFont">18</x:Double>
+            <x:Double x:Key="TagTextFont">18</x:Double>
+            <x:Double x:Key="StatsNumberFont">20</x:Double>
+            <x:Double x:Key="StatsCaptionFont">16</x:Double>
+            
+            <!--styles-->
+            <Style x:Key="ProfileNameLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}"></Setter>
+                <Setter Property="FontFamily" Value="{StaticResource MediumFontFamily}"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource TitleFont}"></Setter>
+            </Style>
+
+            <Style x:Key="ProfileTagLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}"></Setter>
+                <Setter Property="FontFamily" Value="{StaticResource RegularFontFamily}"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource TagTextFont}"></Setter>
+            </Style>
+
+            <Style x:Key="StatsNumberLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource HeaderTextColor}"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="FontFamily" Value="{StaticResource LightFontFamily}"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource StatsNumberFont}"></Setter>
+            </Style>
+
+            <Style x:Key="StatsCaptionLabel" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource BodyTextColor}"></Setter>
+                <Setter Property="Margin" Value="0,-5,0,0"></Setter>
+                <Setter Property="HorizontalTextAlignment" Value="Center"></Setter>
+                <Setter Property="FontFamily" Value="{StaticResource LightFontFamily}"></Setter>
+                <Setter Property="FontSize" Value="{StaticResource StatsCaptionFont}"></Setter>
+            </Style>
+
+        </ResourceDictionary>
+
     </Application.Resources>
 </Application>

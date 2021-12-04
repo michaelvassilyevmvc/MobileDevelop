@@ -11,7 +11,8 @@
                 FlyoutDisplayOptions="AsMultipleItems">
         <ShellContent Title="Bears" Icon="ic_action_beach_access.png" IsTabStop="true" ContentTemplate="{DataTemplate local:Page1}"></ShellContent>
         <ShellContent Title="Elephants" Icon="ic_action_desktop_mac.png" IsTabStop="true" ContentTemplate="{DataTemplate local:Page2}"></ShellContent>
-        
+        <ShellContent Title="Humans" Icon="ic_humans.png" IsTabStop="true" ContentTemplate="{DataTemplate local:HumanPage}"></ShellContent>
+        <ShellContent Title="StarWars" IsTabStop="True" ContentTemplate="{DataTemplate local:StarWarsPage}"></ShellContent>
     </FlyoutItem>
     <ShellContent Title="About" Icon="ic_action_beach_access.png" ContentTemplate="{DataTemplate local:Page1}"></ShellContent>
     
