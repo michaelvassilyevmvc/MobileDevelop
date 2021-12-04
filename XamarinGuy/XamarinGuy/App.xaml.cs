@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using XamarinGuy.Views;
 
 namespace XamarinGuy
 {
@@ -10,7 +11,7 @@ namespace XamarinGuy
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new SplashPage();
         }
 
         protected override void OnStart()
