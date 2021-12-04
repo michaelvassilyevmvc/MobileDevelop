@@ -11,7 +11,7 @@ namespace XamarinGuy
         {
             InitializeComponent();
 
-            MainPage = new SplashPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

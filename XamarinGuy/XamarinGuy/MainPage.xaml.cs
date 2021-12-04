@@ -19,5 +19,15 @@ namespace XamarinGuy
         {
 
         }
+
+        private void browser_Navigating(object sender, WebNavigatingEventArgs e)
+        {
+
+        }
+
+        private void browser_Navigated(object sender, WebNavigatedEventArgs e)
+        {
+
+        }
     }
 }

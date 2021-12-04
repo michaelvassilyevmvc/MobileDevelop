@@ -15,5 +15,4 @@
         <ShellContent Title="GoogleCard" IsTabStop="True" ContentTemplate="{DataTemplate local:CardNewsPage}"></ShellContent>
     </FlyoutItem>
     <ShellContent Title="About" Icon="ic_action_beach_access.png" ContentTemplate="{DataTemplate local:Page1}"></ShellContent>
-    
 </Shell>
